@@ -72,17 +72,11 @@ nav a:hover {
    HERO SECTION
 ========================= */
 .hero {
-  min-height: 90vh;
-  width: 100%;
-  background:
-    linear-gradient(
-      rgba(10, 42, 102, 0.75),
-      rgba(10, 42, 102, 0.75)
-    ),
-    url("assets/hero.jpg");
+  height: 80vh;
+  background: linear-gradient(rgba(10,42,102,0.7), rgba(10,42,102,0.7)),
+    url("https://images.unsplash.com/photo-1581578731548-c64695cc6952");
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   align-items: center;
   text-align: center;
