@@ -268,3 +268,31 @@ footer {
   margin: 0 auto 35px;
   opacity: 0.95;
 }
+/* =========================
+   REVIEWS SECTION
+========================= */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.review-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.review-card h4 {
+  color: #0a2a66;
+  font-weight: 600;
+}
