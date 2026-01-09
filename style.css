@@ -213,3 +213,21 @@ footer {
     display: none;
   }
 }
+/* =========================
+   LOCATION SECTION
+========================= */
+.location-box {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+.location-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
