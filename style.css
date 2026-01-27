@@ -296,3 +296,28 @@ footer {
   color: #0a2a66;
   font-weight: 600;
 }
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.1);
+}
+
+.social-links i {
+  line-height: 1;
+}
