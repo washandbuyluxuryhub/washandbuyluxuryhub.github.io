@@ -302,6 +302,14 @@ footer {
   margin-top: 20px;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 20px auto;
+}
+
 .social-links a {
   display: inline-flex;
   align-items: center;
