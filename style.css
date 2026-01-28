@@ -275,7 +275,7 @@ footer {
   opacity: 0.95;
 }
 /* =========================
-   REVIEWS – PREMIUM CARD STYLE
+   REVIEWS
 ========================= */
 .reviews-grid {
   display: grid;
@@ -305,7 +305,7 @@ footer {
 }
 
 .review-stars i {
-  color: #f5b301; /* gold */
+  color: #f5b301;
   font-size: 16px;
 }
 
@@ -317,15 +317,15 @@ footer {
 
 .review-card h4 {
   color: #0a2a66;
-  font-weight: 600;
   font-size: 0.95rem;
+  letter-spacing: 0.3px;
 }
+
 .social-links {
   display: flex;
   gap: 16px;
   margin-top: 20px;
 }
-
 .social-links {
   display: flex;
   justify-content: center;
@@ -333,7 +333,6 @@ footer {
   gap: 16px;
   margin: 20px auto;
 }
-
 .social-links a {
   display: inline-flex;
   align-items: center;
