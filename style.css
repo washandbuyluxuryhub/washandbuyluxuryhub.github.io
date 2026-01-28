@@ -378,3 +378,32 @@ footer {
   border-radius: 12px;
   cursor: default;
 }
+/* =========================
+   SERVICES – PREMIUM HOVER
+========================= */
+.card {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(0,0,0,0.15);
+}
+/* =========================
+   GALLERY – BRIGHT HOVER GLOW
+========================= */
+.gallery img {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.35),
+    0 0 0 6px rgba(212, 175, 55, 0.12);
+}
