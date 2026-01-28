@@ -15,6 +15,7 @@ body {
 }
 
 img {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -33,14 +34,13 @@ img {
 .header {
   background: #0a2a66;
   color: #ffffff;
-  padding: 16px 0;
+  padding: 15px 0;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .logo {
@@ -53,6 +53,8 @@ img {
   width: 64px;
   height: 64px;
   object-fit: contain;
+  image-rendering: auto;
+
 }
 
 nav a {
@@ -67,11 +69,11 @@ nav a:hover {
 }
 
 /* =========================
-   HERO
+   HERO SECTION
 ========================= */
 .hero {
   height: 80vh;
-  background: linear-gradient(rgba(10,42,102,0.75), rgba(10,42,102,0.75)),
+  background: linear-gradient(rgba(10,42,102,0.7), rgba(10,42,102,0.7)),
     url("https://images.unsplash.com/photo-1581578731548-c64695cc6952");
   background-size: cover;
   background-position: center;
@@ -87,7 +89,7 @@ nav a:hover {
 
 .hero h2 {
   font-size: 3rem;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .hero p {
@@ -95,19 +97,10 @@ nav a:hover {
   opacity: 0.95;
 }
 
-.hero-sub {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  opacity: 0.85;
-}
-
 .hero-btn-wrapper {
   margin-top: 40px;
 }
 
-/* =========================
-   BUTTON
-========================= */
 .btn {
   background: #d4af37;
   padding: 14px 36px;
@@ -134,15 +127,8 @@ nav a:hover {
 
 .section h2 {
   color: #0a2a66;
-  margin-bottom: 16px;
-  font-size: 2.3rem;
-}
-
-.section > .container > p {
-  max-width: 720px;
-  margin: 0 auto 25px;
-  font-size: 1.05rem;
-  opacity: 0.9;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
 }
 
 .gray {
@@ -161,16 +147,10 @@ nav a:hover {
 
 .card {
   background: #ffffff;
-  padding: 34px 28px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
   font-weight: 600;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
 }
 
 /* =========================
@@ -187,17 +167,109 @@ nav a:hover {
   width: 100%;
   height: 280px;
   object-fit: cover;
+  object-position: center;
   border-radius: 18px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+  background-color: #f0f0f0;
 }
 
 /* =========================
-   REVIEWS
+   CONTACT
+========================= */
+.contact-box p {
+  margin: 12px 0;
+  font-size: 1rem;
+}
+
+.contact-box a {
+  color: #0a2a66;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #0a2a66;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  nav {
+    display: none;
+  }
+}
+/* =========================
+   LOCATION SECTION
+========================= */
+.location-box {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+.location-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+/* =========================
+   LOCATION HERO SECTION
+========================= */
+.location-hero {
+  min-height: 80vh;
+  width: 100%;
+  background:
+    linear-gradient(
+      rgba(10, 42, 102, 0.75),
+      rgba(10, 42, 102, 0.75)
+    ),
+    url("assets/location.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+}
+
+.location-overlay {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.location-hero h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.location-hero p {
+  font-size: 1.15rem;
+  max-width: 720px;
+  margin: 0 auto 35px;
+  opacity: 0.95;
+}
+/* =========================
+   REVIEWS – PREMIUM CARD STYLE
 ========================= */
 .reviews-grid {
   display: grid;
@@ -227,7 +299,7 @@ nav a:hover {
 }
 
 .review-stars i {
-  color: #f5b301;
+  color: #f5b301; /* gold */
   font-size: 16px;
 }
 
@@ -239,116 +311,70 @@ nav a:hover {
 
 .review-card h4 {
   color: #0a2a66;
+  font-weight: 600;
   font-size: 0.95rem;
-  letter-spacing: 0.3px;
 }
 
-/* =========================
-   LOCATION
-========================= */
-.location-hero {
-  min-height: 80vh;
-  background: linear-gradient(rgba(10,42,102,0.75), rgba(10,42,102,0.75)),
-    url("assets/location.jpg");
-  background-size: cover;
-  background-position: center;
+}
+.social-links {
   display: flex;
-  align-items: center;
-}
-
-.location-overlay {
-  width: 100%;
-  text-align: center;
-  color: #ffffff;
-}
-
-.location-hero h2 {
-  font-size: 2.8rem;
-  margin-bottom: 15px;
-}
-
-.location-hero p {
-  font-size: 1.15rem;
-  max-width: 720px;
-  margin: 0 auto 30px;
-  opacity: 0.95;
-}
-
-.location-hero .btn:hover {
-  box-shadow: 0 0 0 4px rgba(212,175,55,0.25);
-}
-
-/* =========================
-   CONTACT
-========================= */
-.contact-box p {
-  margin: 12px 0;
-}
-
-.contact-box a {
-  color: #0a2a66;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.contact-box a:hover {
-  text-decoration: underline;
+  gap: 16px;
+  margin-top: 20px;
 }
 
 .social-links {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 16px;
-  margin: 25px 0;
+  margin: 20px auto;
 }
 
 .social-links a {
-  width: 44px;
-  height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
+  height: 44px;
   font-size: 20px;
   border-radius: 50%;
-  transition: transform 0.2s ease;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .social-links a:hover {
-  transform: scale(1.12);
+  transform: scale(1.1);
 }
 
-/* =========================
-   FOOTER
-========================= */
-footer {
-  background: #0a2a66;
-  color: #ffffff;
-  text-align: center;
-  padding: 25px 0;
-  font-size: 0.9rem;
+.social-links i {
+  line-height: 1;
+}
+.review-stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 12px;
 }
 
-footer p {
-  opacity: 0.85;
-  letter-spacing: 0.4px;
+.review-stars i {
+  color: #f5b301; /* gold */
+  font-size: 16px;
+}
+.section p,
+.section h2,
+.section h4,
+.card,
+.review-card {
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2.2rem;
-  }
-
-  nav {
-    width: 100%;
-    text-align: center;
-    margin-top: 12px;
-  }
-
-  nav a {
-    margin: 8px 12px;
-    display: inline-block;
-  }
+.section p:hover,
+.section h2:hover,
+.section h4:hover,
+.card:hover,
+.review-card:hover {
+  background-color: rgba(212, 175, 55, 0.08); /* soft gold */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  cursor: default;
 }
