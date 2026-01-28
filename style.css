@@ -345,3 +345,21 @@ footer {
   color: #f5b301; /* gold */
   font-size: 16px;
 }
+.section p,
+.section h2,
+.section h4,
+.card,
+.review-card {
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.section p:hover,
+.section h2:hover,
+.section h4:hover,
+.card:hover,
+.review-card:hover {
+  background-color: rgba(212, 175, 55, 0.08); /* soft gold */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  cursor: default;
+}
