@@ -373,9 +373,7 @@ footer {
 
 .section p:hover,
 .section h2:hover,
-.section h4:hover,
-.card:hover,
-.review-card:hover {
+.section h4:hover {
   background-color: rgba(212, 175, 55, 0.08); /* soft gold */
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
   border-radius: 12px;
