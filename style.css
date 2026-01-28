@@ -53,6 +53,8 @@ img {
   width: 64px;
   height: 64px;
   object-fit: contain;
+  image-rendering: auto;
+
 }
 
 nav a {
@@ -67,7 +69,7 @@ nav a:hover {
 }
 
 /* =========================
-   HERO
+   HERO SECTION
 ========================= */
 .hero {
   height: 80vh;
@@ -107,7 +109,7 @@ nav a:hover {
   font-weight: 600;
   border-radius: 30px;
   display: inline-block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
@@ -149,14 +151,6 @@ nav a:hover {
   border-radius: 18px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.08);
   font-weight: 600;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow:
-    0 22px 50px rgba(0,0,0,0.18),
-    0 0 0 4px rgba(212,175,55,0.12);
 }
 
 /* =========================
@@ -176,26 +170,83 @@ nav a:hover {
   object-position: center;
   border-radius: 18px;
   background-color: #f0f0f0;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.gallery img:hover {
-  transform: translateY(-6px);
-  box-shadow:
-    0 30px 75px rgba(0,0,0,0.35),
-    0 0 0 6px rgba(212,175,55,0.18);
 }
 
 /* =========================
-   LOCATION
+   CONTACT
+========================= */
+.contact-box p {
+  margin: 12px 0;
+  font-size: 1rem;
+}
+
+.contact-box a {
+  color: #0a2a66;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  background: #0a2a66;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  nav {
+    display: none;
+  }
+}
+/* =========================
+   LOCATION SECTION
+========================= */
+.location-box {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+.location-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+/* =========================
+   LOCATION HERO SECTION
 ========================= */
 .location-hero {
   min-height: 80vh;
+  width: 100%;
   background:
-    linear-gradient(rgba(10,42,102,0.75), rgba(10,42,102,0.75)),
+    linear-gradient(
+      rgba(10, 42, 102, 0.75),
+      rgba(10, 42, 102, 0.75)
+    ),
     url("assets/location.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
 }
@@ -215,8 +266,8 @@ nav a:hover {
   font-size: 1.15rem;
   max-width: 720px;
   margin: 0 auto 35px;
+  opacity: 0.95;
 }
-
 /* =========================
    REVIEWS
 ========================= */
@@ -261,53 +312,68 @@ nav a:hover {
 .review-card h4 {
   color: #0a2a66;
   font-size: 0.95rem;
+  letter-spacing: 0.3px;
 }
 
-/* =========================
-   SOCIAL ICONS
-========================= */
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
 .social-links {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 16px;
   margin: 20px auto;
 }
 
 .social-links a {
-  width: 44px;
-  height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  width: 44px;
+  height: 44px;
   font-size: 20px;
-  transition: transform 0.2s ease;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .social-links a:hover {
   transform: scale(1.1);
 }
 
-/* =========================
-   FOOTER
-========================= */
-footer {
-  background: #0a2a66;
-  color: #ffffff;
-  text-align: center;
-  padding: 25px 0;
-  font-size: 0.9rem;
+.social-links i {
+  line-height: 1;
+}
+.review-stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 12px;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 2.2rem;
-  }
+.review-stars i {
+  color: #f5b301; /* gold */
+  font-size: 16px;
+}
+.section p,
+.section h2,
+.section h4,
+.card,
+.review-card {
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
 
-  nav {
-    display: none;
-  }
+.section p:hover,
+.section h2:hover,
+.section h4:hover,
+.card:hover,
+.review-card:hover {
+  background-color: rgba(212, 175, 55, 0.08); /* soft gold */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  cursor: default;
 }
