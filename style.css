@@ -135,7 +135,6 @@ nav a:hover {
   background: #f5f7fb;
 }
 
-
 /* =========================
    SERVICES
 ========================= */
@@ -155,18 +154,15 @@ nav a:hover {
 }
 
 /* =========================
-   GALLERY – BRIGHT HOVER GLOW
+   GALLERY
 ========================= */
-.gallery img {
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 35px;
 }
 
-.gallery img:hover {
-  transform: scale(1.03);
-  box-shadow:
-    0 25px 60px rgba(0, 0, 0, 0.35),
-    0 0 0 6px rgba(212, 175, 55, 0.12);
-}
 .gallery img {
   width: 100%;
   height: 280px;
@@ -318,68 +314,3 @@ footer {
   font-weight: 600;
   font-size: 0.95rem;
 }
-
-}
-.social-links {
-  display: flex;
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-  margin: 20px auto;
-}
-
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  font-size: 20px;
-  border-radius: 50%;
-  text-decoration: none;
-  transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.social-links a:hover {
-  transform: scale(1.1);
-}
-
-.social-links i {
-  line-height: 1;
-}
-.review-stars {
-  display: flex;
-  justify-content: center;
-  gap: 4px;
-  margin-bottom: 12px;
-}
-
-.review-stars i {
-  color: #f5b301; /* gold */
-  font-size: 16px;
-}
-.section p,
-.section h2,
-.section h4,
-.card,
-.review-card {
-  transition: background-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.section p:hover,
-.section h2:hover,
-.section h4:hover,
-.card:hover,
-.review-card:hover {
-  background-color: rgba(212, 175, 55, 0.08); /* soft gold */
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  cursor: default;
-}
-
